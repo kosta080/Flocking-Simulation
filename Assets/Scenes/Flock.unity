@@ -235,6 +235,7 @@ MonoBehaviour:
   RotateSpeed: 9
   Maxforce: 4.5
   Maxspeed: 280
+  Ignorence: 2
   VelovityMin: 150
   VelovityMax: 320
   ScaleMin: 0.8
@@ -245,7 +246,7 @@ MonoBehaviour:
   Rotationfix: {x: 0.70710677, y: 0, z: 0, w: -0.70710677}
   Boids: []
   boid: {fileID: 6819252320799465091, guid: 1ed02e77a2585b544ad6754692d0cab7, type: 3}
-  boidCount: 280
+  boidCount: 320
 --- !u!114 &1795303253
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,17 +5,18 @@ public class Stearing
 {
     public static Vector2 Align(Boid thisBoid, List<Boid> otherBoids)
     {
+		
 		Vector2 avgVelovity = Vector2.zero;
 		int count = 0;
-		foreach (Boid other in otherBoids)
+		for (int i = 0; i < otherBoids.Count; i += thisBoid.ignorence)
 		{
-			if (other == thisBoid)
+			if (otherBoids[i] == thisBoid)
 				continue;
-			float dist = Vector2.Distance(thisBoid.position, other.position);
+			float dist = Vector2.Distance(thisBoid.position, otherBoids[i].position);
 			if (dist > thisBoid.perception)
 				continue;
 
-			avgVelovity += other.velovity;
+			avgVelovity += otherBoids[i].velovity;
 			count++;
 		}
 		if (count > 0)
@@ -35,17 +36,18 @@ public class Stearing
 	}
 	public static Vector2 Cohesion(Boid thisBoid, List<Boid> otherBoids)
 	{
+		
 		Vector2 avgPosition = Vector2.zero;
 		int count = 0;
-		foreach (Boid other in otherBoids)
+		for (int i = 0; i < otherBoids.Count; i += thisBoid.ignorence)
 		{
-			if (other == thisBoid)
+			if (otherBoids[i] == thisBoid)
 				continue;
-			float dist = Vector2.Distance(thisBoid.position, other.position);
+			float dist = Vector2.Distance(thisBoid.position, otherBoids[i].position);
 			if (dist > thisBoid.perception)
 				continue;
 
-			avgPosition += other.position;
+			avgPosition += otherBoids[i].position;
 			count++;
 		}
 		if (count > 0)
@@ -65,17 +67,20 @@ public class Stearing
 	}
 	public static Vector2 Separation(Boid thisBoid, List<Boid> otherBoids)
 	{
+		
 		Vector2 avgSpace = Vector2.zero;
 		int count = 0;
-		foreach (Boid other in otherBoids)
+		//(Boid other in otherBoids)
+		for (int i=0; i < otherBoids.Count;i+= thisBoid.ignorence)
 		{
-			if (other == thisBoid)
+			if (otherBoids[i] == thisBoid)
 				continue;
-			float dist = Vector2.Distance(thisBoid.position, other.position);
+			float dist = Vector2.Distance(thisBoid.position, otherBoids[i].position);
+
 			if (dist > thisBoid.collisionPerception)
 				continue;
 
-			Vector2 diff = VectCalc.vec3to2(thisBoid.position) - other.position;
+			Vector2 diff = VectCalc.vec3to2(thisBoid.position) - otherBoids[i].position;
 			avgSpace += diff / dist;
 			count++;
 		}

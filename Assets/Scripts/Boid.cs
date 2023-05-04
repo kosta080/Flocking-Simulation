@@ -9,6 +9,7 @@ public class Boid: MonoBehaviour
 	public float collisionPerception;
 	public float maxforce;
 	public float maxspeed;
+	public int ignorence;
 
 	private Vector3 prevPos = Vector3.zero;
 	private Vector2 acceleration;
@@ -57,6 +58,7 @@ public class Boid: MonoBehaviour
 		maxforce = flock.Maxforce * individualScale;
 		maxspeed = flock.Maxspeed * individualScale;
 		collisionPerception = flock.CollisionPerception;
+		ignorence = flock.Ignorence > 1 ? flock.Ignorence : 1;
 	}
 
 	private void updateBoidRotation()

@@ -11,6 +11,7 @@ public class Flock : MonoBehaviour
     public float RotateSpeed;
     public float Maxforce;
     public float Maxspeed;
+    public int Ignorence;
 
     [Header("Boid Start Parameters")]
     public float VelovityMin;
