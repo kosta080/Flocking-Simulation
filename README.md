@@ -4,6 +4,7 @@ Craig Reynolds Boids algorithm implimented in unity
 Unity Flocking Simulation Script
 
 The Flocking Simulation script in Unity is an implementation of Craig Reynolds' Boids algorithm. This algorithm simulates coordinated animal motion, such as bird flocks and fish schools, by defining a set of principles that govern the behavior of each individual in the group.
+https://www.red3d.com/cwr/boids/
 
 While collaborating with Roman Koretsky, we discussed crowd behavior simulation and he shared a helpful YouTube video with me on how to implement the Boid behavior  https://www.youtube.com/watch?v=mhjuuHl6qHM 
 This inspired me to try implementing it in Unity.
