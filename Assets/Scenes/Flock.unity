@@ -245,13 +245,13 @@ MonoBehaviour:
   CollisionPerception: 20
   RotateSpeed: 9
   Maxforce: 0.09
-  Maxforce2: 2.5
-  Maxspeed: 4
-  AlignSlider: 1.59
-  CohisionSlider: 1
-  SeperationSlider: 2.5
+  Maxspeed: 6
+  AlignSlider: 1.11
+  CohisionSlider: 1.1
+  SeperationSlider: 1.8
   Orientation: {x: 1, y: 1, z: 1}
   Rotationfix: {x: 0.70710677, y: 0, z: 0, w: -0.70710677}
+  useACS: 0
   Boids: []
 --- !u!114 &1795303253
 MonoBehaviour:

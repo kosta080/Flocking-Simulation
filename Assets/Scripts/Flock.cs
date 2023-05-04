@@ -16,7 +16,6 @@ public class Flock : MonoBehaviour
     public float CollisionPerception;
     public float RotateSpeed;
     public float Maxforce;
-    public float Maxforce2;
     public float Maxspeed;
 
 
@@ -30,6 +29,8 @@ public class Flock : MonoBehaviour
 
     public Vector3 Orientation;
     public Quaternion Rotationfix;
+
+    public bool useACS;
 
     public List<Boid> Boids;
 

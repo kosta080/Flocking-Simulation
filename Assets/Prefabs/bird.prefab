@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6ed6d60d77345f9479aba6318ad42cf6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc0ee8d3e1b24884fafbad13e83bbe38, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -96,4 +96,3 @@ MonoBehaviour:
   collisionPerception: 0
   maxforce: 0.1
   maxspeed: 4
-  f: 10
