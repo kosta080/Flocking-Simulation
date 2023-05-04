@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
-  - component: {fileID: 963194226}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -141,14 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &963194226
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -239,20 +230,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfc08aefb19cd449824b77ecce6f213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boid: {fileID: 6819252320799465091, guid: 1ed02e77a2585b544ad6754692d0cab7, type: 3}
-  boidCount: 200
   Perception: 55
   CollisionPerception: 20
   RotateSpeed: 9
-  Maxforce: 0.09
-  Maxspeed: 6
+  Maxforce: 4.5
+  Maxspeed: 280
+  VelovityMin: 150
+  VelovityMax: 320
+  ScaleMin: 0.8
+  ScaleMax: 1.9
   AlignSlider: 1.11
   CohisionSlider: 1.1
-  SeperationSlider: 1.8
-  Orientation: {x: 1, y: 1, z: 1}
+  SeperationSlider: 2.1
   Rotationfix: {x: 0.70710677, y: 0, z: 0, w: -0.70710677}
-  useACS: 0
   Boids: []
+  boid: {fileID: 6819252320799465091, guid: 1ed02e77a2585b544ad6754692d0cab7, type: 3}
+  boidCount: 280
 --- !u!114 &1795303253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,12 +275,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
