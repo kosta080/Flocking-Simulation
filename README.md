@@ -14,4 +14,9 @@ Here is my implementation of the Boids model
 the Flock class is responcible for generation the boids and cantains public valiues to let you tweak the parameters
 the Boid class is controlling the individial boid and using the helper classes (Stearing, VectCalc)
 
+boidCount and Ignorence bothe have segnificant impact on the performence
+if you increase boidCount and get FPS drop you should also increase Ignorence which makes each boid skip neghbor boids in the computation whoch makes the for loops shorter and the game run smoother
+low values of Ignorence dont have big impact on the overall appearence of the simulation but above 5 you start to notice that boids are ignoring each other
+
+
 Feel free to comment if you see how this can be improved.
