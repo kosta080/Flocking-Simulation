@@ -1,22 +1,18 @@
 # Flocking-Simulation
 Craig Reynolds Boids algorithm implimented in unity
 
-During my work with Roman Koretsky we talked about croud behaviour simulation and he showed me this YT video 
-which is showing how to impliment the Boid behaviour in JS 
-https://www.youtube.com/watch?v=mhjuuHl6qHM
+Unity Flocking Simulation Script
 
-the boid simulation model is a set of principals that were created by Craig Reynolds in 1986 to simulate coordinated animal motion such as bird flocks and fish schools.
-https://www.red3d.com/cwr/boids/
+The Flocking Simulation script in Unity is an implementation of Craig Reynolds' Boids algorithm. This algorithm simulates coordinated animal motion, such as bird flocks and fish schools, by defining a set of principles that govern the behavior of each individual in the group.
 
-Since i came across this article wanted to try this in Unity.
-Here is my implementation of the Boids model
+While collaborating with Roman Koretsky, we discussed crowd behavior simulation and he shared a helpful YouTube video with me on how to implement the Boid behavior  https://www.youtube.com/watch?v=mhjuuHl6qHM 
+This inspired me to try implementing it in Unity.
 
-the Flock class is responcible for generation the boids and cantains public valiues to let you tweak the parameters
-the Boid class is controlling the individial boid and using the helper classes (Stearing, VectCalc)
+The implementation consists of two classes: Flock and Boid. The Flock class is responsible for generating the boids and contains public values that allow you to adjust the simulation parameters. The Boid class controls the behavior of each individual boid, using helper classes such as Steering and Vector Calculation.
 
-boidCount and Ignorence bothe have segnificant impact on the performence
-if you increase boidCount and get FPS drop you should also increase Ignorence which makes each boid skip neghbor boids in the computation whoch makes the for loops shorter and the game run smoother
-low values of Ignorence dont have big impact on the overall appearence of the simulation but above 5 you start to notice that boids are ignoring each other
+It's important to note that boidCount and Ignorence both have significant impact on the performance of the simulation. If you increase boidCount and experience a drop in FPS, you should also increase Ignorence. This causes each boid to skip computation of neighboring boids, resulting in shorter for loops and a smoother game performance. Low values of Ignorence don't have a big impact on the overall appearance of the simulation, but values above 5 will start to make the boids ignore each other.
 
+If you've made it this far, your force is strong ! 
+I've also attempted to optimize the computation by combining them in a single loop, but this resulted in unexpected behavior.
 
-Feel free to comment if you see how this can be improved.
+If you have any suggestions for improving this implementation, please feel free to share them.
